@@ -3,11 +3,17 @@ This is latest version of sex-specific mathematical models implemented in Python
 Use commend: Python3 paralle_simulate.py --sex [option] --species [option] --type [option] --diabete [option] --inhibition [option]
 
 The options here are:
+
 sex: Male, Female;
+
 species: human, rat;
+
 type: superficial, multiple;
+
 diabete: Severe, Moderate, Non;
+
 inhibition: ACE, SGLT2.
+
 
 The Way to understand output files:
 
@@ -20,5 +26,7 @@ Another example: male_hum_pt_flow_of_Na_in_Lumen.txt. It contains luminal flow o
 These results are scaled per nephron.
 
 The unit of concentration from outputs is mmol/L (mM).
+
 The unit of volume is nl/min.
+
 The unit of flow is pmol/min.
