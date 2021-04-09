@@ -33,11 +33,11 @@ def compute_segment(sup_or_jux,gender,humOrrat,sup_or_multi,diabete,inhib,file_t
     elif humOrrat == 'rat':
         NPT = 176
     if gender == 'Male':
-        filename = 'PTparams_M_'+humOrrat[0:3]+'.dat'
+        filename = './datafiles/PTparams_M_'+humOrrat[0:3]+'.dat'
     elif gender == 'Female':
-        filename = 'PTparams_F_'+humOrrat[0:3]+'.dat'
+        filename = './datafiles/PTparams_F_'+humOrrat[0:3]+'.dat'
     else:
-        filename ='PTparams_F_'+humOrrat[0:3]+'.dat'
+        filename ='./datafiles/PTparams_F_'+humOrrat[0:3]+'.dat'
 
     pt=compute(NPT,filename,'Broyden',sup_or_jux,diabete,humOrrat,sup_or_multi=sup_or_multi,inhibition = inhib)
     #========================================================
@@ -281,11 +281,11 @@ def compute_segment(sup_or_jux,gender,humOrrat,sup_or_multi,diabete,inhib,file_t
     elif humOrrat == 'rat':
         NS3 = 25
     if gender == 'Male':
-        filename = 'S3params_M_'+humOrrat[0:3]+'.dat'
+        filename = './datafiles/S3params_M_'+humOrrat[0:3]+'.dat'
     elif gender == 'Female':
-        filename = 'S3params_F_'+humOrrat[0:3]+'.dat'
+        filename = './datafiles/S3params_F_'+humOrrat[0:3]+'.dat'
     else:
-        filename ='S3params_F_'+humOrrat[0:3]+'.dat'
+        filename ='./datafiles/S3params_F_'+humOrrat[0:3]+'.dat'
     s3=compute(NS3,filename,'Newton',sup_or_jux,diabete,humOrrat,sup_or_multi=sup_or_multi,inhibition = inhib)
     #========================================================
     # output S3 Concentrations in Lumen and Cell
@@ -529,11 +529,11 @@ def compute_segment(sup_or_jux,gender,humOrrat,sup_or_multi,diabete,inhib,file_t
     elif humOrrat == 'rat':
         method = 'Broyden'
     if gender == 'Male':
-        filename = 'SDLparams_M_'+humOrrat[0:3]+'.dat'
+        filename = './datafiles/SDLparams_M_'+humOrrat[0:3]+'.dat'
     elif gender == 'Female':
-        filename = 'SDLparams_F_'+humOrrat[0:3]+'.dat'
+        filename = './datafiles/SDLparams_F_'+humOrrat[0:3]+'.dat'
     else:
-        filename ='SDLparams_F_'+humOrrat[0:3]+'.dat'
+        filename ='./datafiles/SDLparams_F_'+humOrrat[0:3]+'.dat'
     #sdl=compute(NSDL,filename,'Broyden',diabete)
     sdl=compute(NSDL,filename,method,sup_or_jux,diabete,humOrrat,sup_or_multi=sup_or_multi,inhibition = inhib)
     #========================================================
@@ -637,11 +637,11 @@ def compute_segment(sup_or_jux,gender,humOrrat,sup_or_multi,diabete,inhib,file_t
     if sup_or_jux != 'sup':
         NLDL = 200
         if gender == 'Male':
-            filename = 'LDLparams_M_'+humOrrat[0:3]+'.dat'
+            filename = './datafiles/LDLparams_M_'+humOrrat[0:3]+'.dat'
         elif gender == 'Female':
-            filename = 'LDLparams_F_'+humOrrat[0:3]+'.dat'
+            filename = './datafiles/LDLparams_F_'+humOrrat[0:3]+'.dat'
         else:
-            filename ='LDLparams_F_'+humOrrat[0:3]+'.dat'
+            filename ='./datafiles/LDLparams_F_'+humOrrat[0:3]+'.dat'
         ldl=compute(NLDL,filename,'Newton',sup_or_jux,diabete,humOrrat,sup_or_multi=sup_or_multi,inhibition = inhib)
     #========================================================
     # output LDL Concentrations in Lumen and Cell
@@ -745,11 +745,11 @@ def compute_segment(sup_or_jux,gender,humOrrat,sup_or_multi,diabete,inhib,file_t
     #========================================================
         NLAL = 200
         if gender == 'Male':
-            filename = 'LALparams_M_rat.dat'
+            filename = './datafiles/LALparams_M_rat.dat'
         elif gender == 'Female':
-            filename = 'LALparams_F_rat.dat'
+            filename = './datafiles/LALparams_F_rat.dat'
         else:
-            filename ='LALparams_F_rat.dat'
+            filename ='./datafiles/LALparams_F_rat.dat'
         lal=compute(NLAL,filename,'Newton',sup_or_jux,diabete,humOrrat,sup_or_multi=sup_or_multi,inhibition = inhib)
     #========================================================
     # output LAL Concentrations in Lumen and Cell
@@ -853,11 +853,11 @@ def compute_segment(sup_or_jux,gender,humOrrat,sup_or_multi,diabete,inhib,file_t
     #========================================================
     NmTAL = 200
     if gender == 'Male':
-        filename = 'mTALparams_M_'+humOrrat[0:3]+'.dat'
+        filename = './datafiles/mTALparams_M_'+humOrrat[0:3]+'.dat'
     elif gender == 'Female':
-        filename = 'mTALparams_F_'+humOrrat[0:3]+'.dat'
+        filename = './datafiles/mTALparams_F_'+humOrrat[0:3]+'.dat'
     else:
-        filename ='mTALparams_F_'+humOrrat[0:3]+'.dat'
+        filename ='./datafiles/mTALparams_F_'+humOrrat[0:3]+'.dat'
     mtal=compute(NmTAL,filename,'Newton',sup_or_jux,diabete,humOrrat,sup_or_multi,inhib)
     #========================================================
     # output mTAL Concentrations in Lumen and Cell
@@ -1056,11 +1056,11 @@ def compute_segment(sup_or_jux,gender,humOrrat,sup_or_multi,diabete,inhib,file_t
     #========================================================
     NcTAL = 200
     if gender == 'Male':
-        filename = 'cTALparams_M_'+humOrrat[0:3]+'.dat'
+        filename = './datafiles/cTALparams_M_'+humOrrat[0:3]+'.dat'
     elif gender == 'Female':
-        filename = 'cTALparams_F_'+humOrrat[0:3]+'.dat'
+        filename = './datafiles/cTALparams_F_'+humOrrat[0:3]+'.dat'
     else:
-        filename ='cTALparams_F_'+humOrrat[0:3]+'.dat'
+        filename ='./datafiles/cTALparams_F_'+humOrrat[0:3]+'.dat'
     ctal=compute(NcTAL,filename,'Newton',sup_or_jux,diabete,humOrrat,sup_or_multi,inhib)
     #========================================================
     # output cTAL Concentrations in Lumen and Cell
@@ -1259,11 +1259,11 @@ def compute_segment(sup_or_jux,gender,humOrrat,sup_or_multi,diabete,inhib,file_t
     #========================================================
     NDCT = 200
     if gender == 'Male':
-        filename = 'DCTparams_M_'+humOrrat[0:3]+'.dat'
+        filename = './datafiles/DCTparams_M_'+humOrrat[0:3]+'.dat'
     elif gender == 'Female':
-        filename = 'DCTparams_F_'+humOrrat[0:3]+'.dat'
+        filename = './datafiles/DCTparams_F_'+humOrrat[0:3]+'.dat'
     else:
-        filename ='DCTparams_F_'+humOrrat[0:3]+'.dat'
+        filename ='./datafiles/DCTparams_F_'+humOrrat[0:3]+'.dat'
     dct=compute(NDCT,filename,'Newton',sup_or_jux,diabete,humOrrat,sup_or_multi,inhib)
     #========================================================
     # output DCT Concentrations in Lumen and Cell
@@ -1467,11 +1467,11 @@ def compute_segment(sup_or_jux,gender,humOrrat,sup_or_multi,diabete,inhib,file_t
     #========================================================
     NCNT = 200
     if gender == 'Male':
-        filename = 'CNTparams_M_'+humOrrat[0:3]+'.dat'
+        filename = './datafiles/CNTparams_M_'+humOrrat[0:3]+'.dat'
     elif gender == 'Female':
-        filename = 'CNTparams_F_'+humOrrat[0:3]+'.dat'
+        filename = './datafiles/CNTparams_F_'+humOrrat[0:3]+'.dat'
     else:
-        filename ='CNTparams_F_'+humOrrat[0:3]+'.dat'
+        filename ='./datafiles/CNTparams_F_'+humOrrat[0:3]+'.dat'
     cnt=compute(NCNT,filename,'Newton',sup_or_jux,diabete,humOrrat,sup_or_multi,inhib)
     #========================================================
     # output CNT Concentrations in Lumen and Cell

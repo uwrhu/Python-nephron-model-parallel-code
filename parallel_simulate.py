@@ -59,11 +59,11 @@ pool.close()
 #========================================================
 NCCD = 200
 if gender == 'Male':
-    filename = 'CCDparams_M_'+humOrrat[0:3]+'.dat'
+    filename = './datafiles/CCDparams_M_'+humOrrat[0:3]+'.dat'
 elif gender == 'Female':
-    filename = 'CCDparams_F_'+humOrrat[0:3]+'.dat'
+    filename = './datafiles/CCDparams_F_'+humOrrat[0:3]+'.dat'
 else:
-    filename ='CCDparams_F_'+humOrrat[0:3]+'.dat'
+    filename ='./datafiles/CCDparams_F_'+humOrrat[0:3]+'.dat'
 ccd=compute(NCCD,filename,'Newton',diabete=diabete,humOrrat=humOrrat,sup_or_multi=sup_or_multi,inhibition = inhib)
 #========================================================
 # output CCD Concentrations in Lumen and Cell
@@ -268,11 +268,11 @@ print('CCD finished.')
 #========================================================
 NOMCD = 200
 if gender == 'Male':
-    filename = 'OMCDparams_M_'+humOrrat[0:3]+'.dat'
+    filename = './datafiles/OMCDparams_M_'+humOrrat[0:3]+'.dat'
 elif gender == 'Female':
-    filename = 'OMCDparams_F_'+humOrrat[0:3]+'.dat'
+    filename = './datafiles/OMCDparams_F_'+humOrrat[0:3]+'.dat'
 else:
-    filename ='OMCDparams_F_'+humOrrat[0:3]+'.dat'
+    filename ='./datafiles/OMCDparams_F_'+humOrrat[0:3]+'.dat'
 if ccd[0].sex == 'male':
     omcd=compute(NOMCD,filename,'Newton',diabete=diabete,humOrrat=humOrrat,sup_or_multi=sup_or_multi,inhibition = inhib)
 elif ccd[0].sex == 'female':
@@ -480,11 +480,11 @@ print('OMCD finished.')
 #========================================================
 NIMCD = 200
 if gender == 'Male':
-    filename = 'IMCDparams_M_'+humOrrat[0:3]+'.dat'
+    filename = './datafiles/IMCDparams_M_'+humOrrat[0:3]+'.dat'
 elif gender == 'Female':
-    filename = 'IMCDparams_F_'+humOrrat[0:3]+'.dat'
+    filename = './datafiles/IMCDparams_F_'+humOrrat[0:3]+'.dat'
 else:
-    filename ='IMCDparams_F_'+humOrrat[0:3]+'.dat'
+    filename ='./datafiles/IMCDparams_F_'+humOrrat[0:3]+'.dat'
 imcd=compute(NIMCD,filename,'Newton',diabete=diabete,humOrrat=humOrrat,sup_or_multi=sup_or_multi,inhibition = inhib)
 #========================================================
 # output IMCD Concentrations in Lumen and Cell

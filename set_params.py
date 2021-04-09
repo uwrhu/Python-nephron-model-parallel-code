@@ -44,7 +44,7 @@ def read_params(cell,filename,j):
 
     file = open(filename,'r')
     
-    cell.segment=filename[0:-16]
+    cell.segment=filename[12:-16]
     
     line = file.readline()
     while (line):
