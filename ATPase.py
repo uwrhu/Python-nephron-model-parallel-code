@@ -22,7 +22,7 @@ import math
 #
 
 def nakatpase(cell,ep,memb_id,act,area):
-    if cell.diabete == 'Yes':
+    if cell.diabete != 'Non':
         if cell.segment == 'PT' or cell.segment == 'S3' or cell.segment == 'cTAL' or cell.segment == 'DCT' or cell.segment == 'CNT' or cell.segment == 'CCD' or cell.segment == 'OMCD':
             act = act*1.1
         elif cell.segment == 'mTAL':

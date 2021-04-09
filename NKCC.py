@@ -3,7 +3,7 @@ import numpy as np
 from defs import *
 
 def nkcc2(cell,memb_id,xNKCC2,area,isoform):
-	if cell.diabete == 'Yes':
+	if cell.diabete != 'Non':
 		if cell.segment == 'mTAL':
 			xNKCC2 = xNKCC2*1.1
 
