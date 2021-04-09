@@ -1,10 +1,10 @@
 This is latest version of sex-specific mathematical models implemented in Python. To speed up the computation time, paralle computation of different types of nephron is implemented. To run the paralle simulation code:
 
-Use commend: Python3 paralle_simulate.py --sex [option] --species [option] --type [option] --diabete [option] --inhibition [option]
+Use commend: **Python3 paralle_simulate.py --sex [option] --species [option] --type [option] --diabete [option] --inhibition [option]**
 
 The options here are:
 
-sex: **Male, Female**;
+sex: **Male, Female(Women is under work)**;
 
 species: **human, rat**;
 
