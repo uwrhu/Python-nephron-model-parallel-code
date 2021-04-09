@@ -681,7 +681,7 @@ def newton(func,x,k,type,spec = 'rat',gender = 'male',sup_jux = 'sup',diabete='N
                 elif gender == 'male':
                     if np.linalg.norm(f)>100:
                         if k==0:
-                            amp = 0.17 # male:0.1 female:0.2
+                            amp = 0.13 # male:0.1 female:0.2
                         else:
                             amp = 0.17 # male:0.2 female:0.2
                     else:
