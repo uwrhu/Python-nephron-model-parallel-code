@@ -4,7 +4,7 @@ Use commend: Python3 paralle_simulate.py --sex [option] --species [option] --typ
 
 The options here are:
 
-sex: **Male, Female**;
+sex: **Male, Female(Under work)**;
 
 species: **human, rat**;
 
