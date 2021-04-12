@@ -423,7 +423,141 @@ def newton(func,x,k,type,spec = 'rat',gender = 'male',sup_jux = 'sup',diabete='N
                             amp = 0.8 # male:0.5 female:0.5   
             else:
                 amp = 1.0
-        elif spec == 'hum' and diabete == 'Moderate':
+        elif spec == 'hum' and diabete == 'Moderate' and inhib != 'SGLT2':
+            if type == 'S3':
+                amp = 1.0 
+            elif type == 'SDL':
+                amp = 1.0
+            elif type == 'mTAL':
+                if np.linalg.norm(f)>100:
+                    amp = 0.2
+                else:
+                    amp = 1.0
+            elif type == 'cTAL' or type == 'MD':
+                if np.linalg.norm(f)>100:
+                    amp = 0.2
+                else:
+                    amp = 0.8             
+            elif type=='DCT':
+                if gender == 'female' and sup_jux == 'jux1':
+                    amp = 0.9
+                elif gender == 'female' and sup_jux == 'jux3':
+                    amp = 0.7
+                elif gender == 'female' and sup_jux == 'jux2':
+                    amp = 0.7
+                elif gender == 'female' and sup_jux == 'sup':
+                    if np.linalg.norm(f)>2000:
+                        amp = 0.8#0.5
+                    else:
+                        amp = 0.5
+                else:
+                    amp = 0.5
+            elif type == 'CNT':
+                if gender == 'male':
+                    if np.linalg.norm(f)>100:
+                        amp = 0.5
+                    else:
+                        amp=0.8
+                elif gender == 'female':
+                    if sup_jux == 'sup':
+                        if np.linalg.norm(f)>100:
+                            amp = 0.5
+                        else:
+                            amp = 0.8
+                    elif sup_jux == 'jux1':
+                        if np.linalg.norm(f)>1000:
+                            if k==0:
+                                amp = 0.5
+                            else:
+                                amp = 0.13
+                        else:
+                            amp = 0.8
+                    elif sup_jux == 'jux2':
+                        if np.linalg.norm(f)>1000:
+                            if k==0:
+                                amp = 0.5
+                            else:
+                                amp = 0.5
+                        else:
+                            amp = 0.8
+                    elif sup_jux == 'jux3':
+                        if np.linalg.norm(f)>1000:
+                            if k==0:
+                                amp = 0.5
+                            else:
+                                amp = 0.5
+                        else:
+                            amp = 0.8
+                    elif sup_jux == 'jux4':
+                        if np.linalg.norm(f)>1000:
+                            if k==0:
+                                amp = 0.3
+                            else:
+                                amp = 0.5
+                        else:
+                            amp = 0.8
+                    elif sup_jux == 'jux5':
+                        if np.linalg.norm(f)>1000:
+                            if k==0:
+                                amp = 0.1
+                            else:
+                                amp = 0.17
+                        else:
+                            amp = 1.0
+            elif type == 'CCD':
+                if gender == 'male':
+                    if np.linalg.norm(f)>100:
+                        if k == 0:
+                            amp = 0.5
+                        else:
+                            amp = 0.2
+                    else:
+                        amp = 0.8
+                elif gender == 'female':
+                    if np.linalg.norm(f)>100:
+                        if k == 0:
+                            amp = 0.2
+                        else:
+                            amp = 0.2
+                    else:
+                        amp = 0.8
+            elif type == 'OMCD':
+                if gender == 'male':
+                    if np.linalg.norm(f)>100:
+                        amp = 0.5 #male: 0.5 female:0.8 (0.5 works for male and female)  
+                    else:
+                        amp = 0.8#male:0.8 female:
+                elif gender == 'female':
+                    if np.linalg.norm(f)>100:
+                        amp = 0.5 #male: 0.5 female:0.8 (0.5 works for male and female)  
+                    else:
+                        amp = 0.8#male:0.8 female:
+            elif type == 'IMCD':
+                if gender == 'female':
+                    if np.linalg.norm(f)>100:
+                        if k==0:
+                            amp = 0.2 # male:0.1 female:0.2
+                        else:
+                            amp = 0.1 # male:0.2 female:0.2
+                    else:
+                        if k==0:
+                            amp = 0.5# male:0.5 female:0.5
+                        else:
+                            amp = 0.5 # male:0.5 female:0.5      
+                elif gender == 'male':
+                    if np.linalg.norm(f)>100:
+                        if k==0:
+                            amp = 0.19#0.19 # male:0.1 female:0.2
+                        else:
+                            amp = 0.17 # male:0.2 female:0.2
+                    else:
+                        if k==0:
+                            amp = 0.8# male:0.5 female:0.5
+                        else:
+                            amp = 0.8 # male:0.5 female:0.5   
+            else:
+                amp = 1.0
+        elif spec == 'hum' and diabete == 'Moderate' and inhib == 'SGLT2':
             if type == 'S3':
                 amp = 1.0 
             elif type == 'SDL':
@@ -556,7 +690,7 @@ def newton(func,x,k,type,spec = 'rat',gender = 'male',sup_jux = 'sup',diabete='N
                         else:
                             amp = 0.8 # male:0.5 female:0.5   
             else:
-                amp = 1.0
+                amp = 1.0        
         elif spec == 'hum' and diabete == 'Severe' and inhib !='SGLT2':
             if type == 'S3':
                 amp = 1.0 
