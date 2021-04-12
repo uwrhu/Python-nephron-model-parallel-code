@@ -29,13 +29,13 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--sex',choices=['Male','Female'],required = True,type = str,help = 'sex of rat')
 parser.add_argument('--species',choices=['human','rat'],required = True,type = str, help = 'Human model or Rat model')
 parser.add_argument('--type',choices = ['superficial','multiple'],required = True,type=str,help='superficial nephron or multiple nephrons?')
-parser.add_argument('--diabete',choices = ['Severe','Moderate','Non'],required = True,type=str,help='diabete status (Severe/Moderate/Non)')
+parser.add_argument('--diabetes',choices = ['Severe','Moderate','Non'],required = True,type=str,help='diabete status (Severe/Moderate/Non)')
 parser.add_argument('--inhibition',choices=['ACE','SGLT2'],default = None,type = str,help = 'any transporter inhibition')
 args = parser.parse_args()
 gender = args.sex
 humOrrat = args.species
 sup_or_multi = args.type
-diabete = args.diabete
+diabete = args.diabetes
 inhib = args.inhibition
 
 if inhib != None:
