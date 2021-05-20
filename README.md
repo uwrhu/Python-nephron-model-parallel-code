@@ -14,6 +14,7 @@ diabetes: **Severe, Moderate, Non**;
 
 inhibition: **ACE, SGLT2, NHE3-50, NHE3-80, NKCC2-70, NKCC2-100, NCC-70, NCC-100, ENaC-70, ENaC-100, SNB-70, SNB-100**.
 
+Human only have ACE and SGLT2 inhibition cases. The others are for rats.
 
 The Way to understand output files:
 
