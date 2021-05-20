@@ -4,7 +4,7 @@ Use commend: **Python3 paralle_simulate.py --sex [option] --species [option] --t
 
 The options here are:
 
-sex: **Male, Female(Women is under work)**;
+sex: **Male, Female**;
 
 species: **human, rat**;
 
@@ -12,7 +12,7 @@ type: **superficial, multiple**;
 
 diabetes: **Severe, Moderate, Non**;
 
-inhibition: **ACE, SGLT2**.
+inhibition: **ACE, SGLT2, NHE3-50, NHE3-80, NKCC2-70, NKCC2-100, NCC-70, NCC-100, ENaC-70, ENaC-100, SNB-70, SNB-100**.
 
 
 The Way to understand output files:
